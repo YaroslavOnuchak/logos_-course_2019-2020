@@ -1,0 +1,29 @@
+* {
+
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.box {
+    width: 20%;
+    height: 150px;
+    background-color: rgb(34, 180, 168);
+    margin: 20px auto;
+}
+
+.one {
+    border: 3px dashed rgb(141, 23, 23);
+}
+
+.two {
+    border: 3px dotted rgb(141, 23, 23);
+    background-color: gold;
+}
+
+.tree {
+    outline: 15px solid rgb(53, 19, 175);
+}
+
+.four {
+    border-left: 10px solid rgb(0, 0, 0);
+}

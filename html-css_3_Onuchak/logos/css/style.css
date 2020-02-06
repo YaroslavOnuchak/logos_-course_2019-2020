@@ -1,0 +1,279 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: white;
+}
+
+body {
+    background-image: url(../images/bg.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header-text {
+    display: flex;
+    margin: 2rem 0 1rem;
+}
+
+header p {
+    text-transform: uppercase;
+}
+
+header span {
+    font-weight: 800;
+    font-size: 2em;
+}
+
+span~span {
+    font-weight: 200;
+
+}
+
+/* https://css-tricks.com/how-auto-margins-work-in-flexbox/ */
+.icons-cotial {
+    margin-inline-start: auto;
+    margin-block-start: auto;
+}
+
+.icon {
+    cursor: pointer;
+}
+
+nav {
+    display: flex;
+    padding: 1em;
+    background-color: rgba(128, 128, 128, 0.5);
+    border-radius: 0.5em 0.5em 0 0;
+    -webkit-border-radius: 0.5em 0.5em 0 0;
+    -moz-border-radius: 0.5em 0.5em 0 0;
+    -ms-border-radius: 0.5em 0.5em 0 0;
+    -o-border-radius: 0.5em 0.5em 0 0;
+    margin-bottom: 10rem;
+}
+
+nav a {
+    text-decoration: none;
+    padding: 0.2em 1em;
+
+}
+
+.active,
+nav a:hover {
+    background-image: url(../images/menu_hover.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+nav ul {
+
+    list-style: none;
+    display: flex;
+    height: 100%;
+}
+
+li {
+    position: relative;
+}
+
+main {
+    background-color: rgba(77, 77, 77, 0.932);
+    padding: 1rem 2rem;
+}
+
+h2 {
+    color: rgb(40, 195, 247);
+}
+
+.articles-wrap,
+.wrap {
+    display: flex;
+    justify-content: space-between;
+}
+
+.artic-title {
+    margin-bottom: 0.5em;
+}
+
+article .artic-numb {
+    float: left;
+    padding: 1em 1em 0.5em 0;
+}
+
+.artic-text {
+    color: rgb(180, 178, 178);
+}
+
+.artic-contex {
+    margin: 2em 3em 3em 0;
+}
+
+hr {
+    color: #413F44;
+}
+
+.artic-sec2 {
+    width: 50%;
+}
+
+.artic-pic-big {
+    width: 200px;
+    height: 200px;
+
+}
+
+.artic-pic-midd {
+    width: 100px;
+    height: 100px;
+}
+
+.artic-pic-big,
+.artic-pic-midd {
+    outline: 2px solid rgb(0, 0, 0);
+    outline-offset: 5px;
+    margin: 1em 1em 0.5em 0;
+
+}
+
+.text-white {
+    color: white;
+}
+
+.text-ital {
+    font-style: italic;
+}
+
+.title-sec-margin {
+    margin-bottom: 1em;
+}
+
+.form-btn {
+    text-align: right;
+}
+
+.btn {
+    margin: 1em 0;
+    padding: 0.5em 1em;
+    background: url(../images/btn.png);
+    background-size: 100% 100%;
+    border: none;
+}
+
+.btn:hover {
+    background: url(../images/btn_hover.png);
+    background-size: 100% 100%;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    padding: 2em;
+}
+
+/* 2 page */
+.main-2page,
+.main-3page,
+.main-4page {
+    display: flex;
+    justify-content: space-between;
+}
+
+.sect-2page,
+.sect-3page,
+.sect-4page {
+    width: 46%;
+}
+
+.main-2page hr,
+.main-3page hr,
+.main-4page hr {
+    margin: 2em 0;
+}
+
+
+
+.list {
+    list-style: url(../images/list.png);
+}
+
+.list li {
+    margin-bottom: 1.5em;
+}
+
+/* page 3 */
+
+.main-3page .list {
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.wrap-partners {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.name-partners {
+    padding: 0.5em 0;
+    box-sizing: content-box;
+    width: 50%;
+    background-size: cover;
+    height: 39px;
+    cursor: pointer;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+}
+
+.name-partners:nth-child(1) {
+    background: url(../images/koflash.png) no-repeat;
+
+}
+
+.name-partners:nth-child(3) {
+    background: url(../images/flashmo.png) no-repeat;
+}
+
+.name-partners:nth-child(2) {
+    background: url(../images/templatemo.png) no-repeat;
+}
+
+.name-partners:nth-child(4) {
+    background: url(../images/webdesignmo.png) no-repeat;
+}
+
+.name-partners:hover {
+    /* filter: grayscale(100%) brightness(40%) sepia(100%) hue-rotate(-50deg) saturate(600%) contrast(0.8);; */
+    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+}
+
+.name-partners:hover:nth-child(1) {
+    background: url(../images/koflash_hover.png) no-repeat;
+
+}
+
+.name-partners:hover:nth-child(3) {
+    background: url(../images/flashmo_hover.png) no-repeat;
+}
+
+.name-partners:hover:nth-child(2) {
+    background: url(../images/templatemo_hover.png) no-repeat;
+
+}
+
+.name-partners:hover:nth-child(4) {
+    background: url(../images/webdesignmo_hover.png) no-repeat;
+
+
+}

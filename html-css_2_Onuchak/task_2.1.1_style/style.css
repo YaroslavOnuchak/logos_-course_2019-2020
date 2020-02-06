@@ -1,0 +1,14 @@
+* {
+    /* margin: 0;
+    padding: 0; 
+    box-sizing: border-box;*/
+    background-color: gray;
+}
+
+p {
+    color: white;
+    background-color: teal;
+    text-align: right;
+    font-weight: 600;
+
+}

@@ -1,0 +1,864 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Kanit', sans-serif;
+}
+
+
+body {
+    background-color: #fff;
+    margin: 0 auto;
+}
+
+.slider {
+    display: none;
+}
+
+header {
+    width: 100%;
+    height: 690px;
+}
+
+.menu-logo {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 120px;
+    background-color: white;
+
+    position: relative;
+}
+
+.logo {
+    margin: 0 auto;
+    font-size: 40px;
+    font-weight: 900;
+    text-transform: uppercase;
+    user-select: none;
+
+}
+
+.logo span {
+    font-weight: 100;
+    font-size: 37px;
+    font-family: 'Playfair Display', serif;
+}
+
+
+/* взято меню  з
+https://codepen.io/erikterwan/pen/EVzeRP */
+#menuToggle {
+    display: block;
+    position: absolute;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+#menuToggle a {
+    text-decoration: underline;
+    color: #232323;
+    transition: color 0.3s ease;
+}
+
+#menuToggle a:hover {
+    color: tomato;
+}
+
+#menuToggle input {
+    display: block;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: -20px;
+    left: 45px;
+    cursor: pointer;
+    opacity: 0;
+    /* hide this */
+    z-index: 2;
+    /* and place it over the hamburger */
+}
+
+/*
+ * Just a quick hamburger
+ */
+#menuToggle span {
+    display: block;
+    width: 35px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+    margin-left: 50px;
+    background: black;
+    border-radius: 3px;
+    top: -8px;
+    z-index: 1;
+    transform-origin: 4px 0px;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+}
+
+#menuToggle span:nth-child(3) {
+
+    width: 27px;
+    height: 4px;
+
+}
+
+#menuToggle span:first-child {
+    transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2) {
+    transform-origin: 0% 100%;
+}
+
+/* 
+ * Transform all the slices of hamburger
+ * into a crossmark.
+ */
+#menuToggle input:checked~span {
+    opacity: 1;
+    transform: rotate(45deg) translate(-3px, -3px);
+    background: #232323;
+    -webkit-transform: rotate(45deg) translate(-3px, -3px);
+    -moz-transform: rotate(45deg) translate(-3px, -3px);
+    -ms-transform: rotate(45deg) translate(-3px, -3px);
+    -o-transform: rotate(45deg) translate(-3px, -3px);
+}
+
+/*
+  But let's hide the middle one.
+ */
+#menuToggle input:checked~span:nth-last-child(3) {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+/*
+ * Ohyeah and the last one should go the other direction
+ */
+#menuToggle input:checked~span:nth-last-child(2) {
+    transform: rotate(-45deg) translate(0, -1px);
+}
+
+/*
+ * Make this absolute positioned
+ * at the top left of the screen
+ */
+#menu {
+    display: none;
+    position: absolute;
+    width: 344px;
+    height: 359px;
+    margin: 20px 0 0 47px;
+    padding: 52px 0 55px 66px;
+    background: white;
+    list-style-type: none;
+    transition: 0.5s;
+    -webkit-transition: 0.7s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+    box-shadow: 0 -1px 15px;
+
+}
+
+#menu li {
+    padding-bottom: 10px;
+    font-weight: 700;
+    line-height: 24px;
+
+}
+
+/*
+ * And let's slide it in from the left
+ */
+#menuToggle input:checked~ul {
+    display: block;
+
+}
+
+.header-article {
+    display: flex;
+    width: 100%;
+    height: 570px;
+}
+
+.photo-headr {
+    width: 50%;
+    height: 100%;
+    background: url(../images/header.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+
+}
+
+.header-article-context {
+    width: 50%;
+    height: 100%;
+    /* display: flex; 
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center; */
+    position: relative;
+    background-color: black;
+    color: white;
+    padding: 200px 110px 250px 100px;
+
+}
+
+.header-article-context p,
+.header-article-context h1 {
+    text-overflow: ellipsis;
+}
+
+.ls,
+.date {
+    text-decoration: underline;
+    font-size: 12px;
+}
+
+.date {
+    letter-spacing: 6px;
+}
+
+.header-article-context .ls {
+    position: absolute;
+    top: 100px;
+    right: 100px;
+}
+
+.header-article-context .date {
+    position: absolute;
+    top: 100px;
+    left: 100px;
+
+}
+
+.header-article-context p {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 1.5;
+    padding-top: 30px;
+}
+
+.btn {
+    text-transform: uppercase;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    position: relative;
+    font-weight: 500;
+}
+
+.btn-header {
+
+    width: 198px;
+    height: 55px;
+}
+
+header .btn {
+    position: absolute;
+    margin-top: 50px;
+}
+
+.btn-section {
+    display: block;
+    border: none;
+    width: 250px;
+    height: 45px;
+    margin: 55px auto 70px;
+}
+
+.btn:hover {
+    background: linear-gradient(90deg, #0b2e03, #fff200, #fc1212);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+
+}
+
+.btn:hover:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    z-index: -11;
+}
+
+.ls {
+    text-decoration: underline;
+}
+
+main {
+    margin: 60px auto 100px;
+}
+
+.sec-header {
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+main span {
+    margin: 20px 0;
+}
+
+.artic-sec1 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.sec-1 h2 {
+    margin-bottom: 20px;
+}
+
+.sec-1 p {
+    margin-bottom: 63px;
+}
+
+h3 {
+    margin: 0;
+    padding: 0;
+}
+
+.artic-sec1 article,
+.little-articles {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+
+.pic-big {
+    background-position: center center;
+    background-size: cover;
+}
+
+.artic-1 .pic-big {
+    background-image: url(../images/sec1-1big.png);
+}
+
+.artic-2 .pic-big {
+    background-image: url(../images/sec1-2big.png);
+}
+
+.little-article-content {
+
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.pic-litt {
+    width: 100%;
+    background-position: center center;
+    background-size: cover;
+
+}
+
+.sec-1 .artic-3 .pic-litt {
+    background-image: url(../images/sec1-1smal.png);
+}
+
+.sec-1 .artic-4 .pic-litt {
+    background-image: url(../images/sec1-2smal.png);
+}
+
+.sec-1 .artic-5 .pic-litt {
+    background-image: url(../images/sec1-3smal.png);
+}
+
+.sec-2 .artic-1 .pic-litt {
+    background-image: url(../images/sec2-1smal.png);
+}
+
+.sec-2 .artic-2 .pic-litt {
+    background-image: url(../images/sec2-2smal.png);
+}
+
+.sec-2 .artic-3 .pic-litt {
+    background-image: url(../images/sec2-3smal.png);
+}
+
+.sec-3 .artic-1 .pic-litt {
+    background-image: url(../images/sec3-1smal.png);
+}
+
+.sec-3 .artic-2 .pic-litt {
+    background-image: url(../images/sec3-2smal.png);
+}
+
+.sec-3 .artic-3 .pic-litt {
+    background-image: url(../images/sec3-3smal.png);
+}
+
+.sec-2-heder {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.article-context {
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.article-context p {
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-bottom: 20px;
+    font-size: 34px;
+    line-height: 1.5px;
+
+
+}
+
+.article-context .btn {
+    margin-top: 20px;
+}
+
+.sec-2-heder div {
+    width: 50%;
+    height: 360px;
+    position: relative;
+    background-color: black;
+    color: white;
+}
+
+.pic-heder-sec-2 {
+    width: 100%;
+    height: 100%;
+    background-image: url(../images/sec2-1big.png);
+    background-size: cover;
+}
+
+
+.sec-2 .btn-section,
+.sec-3 .btn-section {
+    margin: 35px auto 33px;
+}
+
+footer {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 150px;
+    width: 100%;
+    color: white;
+    text-align: center;
+
+    position: relative;
+}
+
+
+footer p {
+    font-size: 12px;
+    font-weight: 200;
+    line-height: 1.5;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+
+}
+
+@media screen and (min-width: 1200px) {
+    body {
+        min-width: 1200px;
+
+    }
+
+    header {
+        height: 690px;
+    }
+
+    main {
+        max-width: 1140px;
+
+    }
+
+    .artic-sec1 article {
+        width: 555px;
+    }
+
+    .pic-big {
+        width: 100%;
+        height: 365px;
+    }
+
+    .little-article-content {
+        width: 360px;
+    }
+
+    .pic-litt {
+        height: 240px;
+    }
+}
+
+@media screen and (min-width: 970px) and (max-width: 1200px) {
+
+    header {
+        height: 690px;
+    }
+
+    #menu {
+        width: 300px;
+        height: 300px;
+    }
+
+    .header-article-context {
+        padding: 185px 105px 120px;
+    }
+
+    main {
+        width: 940px;
+    }
+
+    .sec-header {
+        margin-bottom: 21px;
+    }
+
+    .artic-sec1 article {
+        width: 455px;
+    }
+
+    .pic-big {
+        width: 100%;
+        height: 300px;
+    }
+
+    .little-article-content {
+        width: 295px;
+    }
+
+    .sec-1 p {
+        margin-bottom: 30px;
+    }
+
+    .pic-litt {
+        height: 195px;
+    }
+
+    .sec-2-heder div {
+        height: 360px;
+    }
+
+    footer p {
+        bottom: 25px;
+    }
+
+}
+
+@media screen and (max-width: 970px) {
+    header {
+        height: 420px;
+    }
+
+    .menu-logo {
+        height: 65px;
+    }
+
+    .logo {
+        font-size: 30px;
+        font-weight: 900;
+    }
+
+    .logo span {
+        font-size: 29px;
+    }
+
+    #menu {
+        width: 300px;
+        height: 300px;
+        margin: 20px 0 0 47px;
+    }
+
+    #menuToggle input {
+        top: -20px;
+        left: 18px;
+
+    }
+
+    #menuToggle span {
+
+        width: 25px;
+        height: 3px;
+        margin-left: 25px;
+
+
+
+    }
+
+    #menuToggle span:nth-child(3) {
+        width: 20px;
+        height: 3px;
+    }
+
+    #menuToggle input:checked~span {
+        transform: rotate(45deg) translate(0, 1px);
+        -webkit-transform: rotate(45deg) translate(0, 1px);
+        -moz-transform: rotate(45deg) translate(0, 1px);
+        -ms-transform: rotate(45deg) translate(0, 1px);
+        -o-transform: rotate(45deg) translate(0, 1px);
+    }
+
+
+    .header-article {
+        height: 355px;
+    }
+
+    .header-article-context {
+        padding: 110px 21px 72px;
+    }
+
+    .header-article-context .ls {
+        display: none;
+    }
+
+    .header-article-context .date {
+
+        top: 72px;
+        left: 21px;
+
+    }
+
+    .header-article-context p {
+        font-size: 12px;
+        padding-top: 20px;
+    }
+
+    .header-article-context h1 {
+        font-weight: 900;
+        font-size: 18px;
+
+    }
+
+    .btn-header {
+        height: 40px;
+    }
+
+    header .btn {
+        margin-top: 30px;
+    }
+
+
+    .btn-section {
+        width: 240px;
+        height: 40px;
+        margin: 50px auto 60px;
+    }
+
+    main {
+        margin-bottom: 0;
+        max-width: 720px;
+    }
+
+    .sec-header {
+        margin-bottom: 21px;
+    }
+
+    .artic-sec1 article {
+        width: 345px;
+    }
+
+    .pic-big {
+        width: 100%;
+        height: 228px;
+    }
+
+    .articles h2 {
+        font-size: 18px;
+    }
+
+    .articles p {
+        font-size: 14px;
+    }
+
+    .articles h2 {
+        font-size: 18px;
+    }
+
+    .little-article-content {
+        width: 220px;
+
+    }
+
+    .sec-1 p {
+        margin-bottom: 30px;
+    }
+
+    .pic-litt {
+        height: 145px;
+    }
+
+    .sec-2-heder div {
+        height: 275px;
+    }
+
+    .article-context p {
+        margin-bottom: 27px;
+        font-size: 27px;
+
+    }
+
+    .sec-2 .btn-section,
+    .sec-3 .btn-section {
+        margin: 53px auto 33px;
+    }
+
+    footer p {
+        bottom: 25px;
+    }
+
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+    header {
+        min-height: 600px;
+
+    }
+
+    #menuToggle {
+        position: relative;
+    }
+
+    #menu {
+        display: block;
+        width: 300px;
+        top: 0;
+        left: -500px;
+        z-index: 77;
+        padding: 20px 0 20px 20px;
+    }
+
+    #menuToggle input:checked~ul {
+        top: 0;
+        left: -40px;
+        transition: .5s;
+        -webkit-transition: .5s;
+        -moz-transition: .5s;
+        -ms-transition: .5s;
+        -o-transition: .5s;
+    }
+
+
+    .header-article {
+        height: 540px;
+        flex-direction: column;
+    }
+
+    .photo-headr {
+        width: 100%;
+        min-height: 295px;
+
+    }
+
+    .header-article-context {
+        min-height: 245px;
+        width: 100%;
+        padding: 53px 12px 32px;
+    }
+
+    .header-article-context .ls {
+        display: none;
+    }
+
+    .header-article-context .date {
+        top: 15px;
+        left: 12px;
+
+    }
+
+    .btn-header {
+        height: 40px;
+    }
+
+    header .btn {
+        margin-top: 30px;
+    }
+
+
+    .btn-section {
+        width: 240px;
+        height: 40px;
+        margin: 50px auto 60px;
+    }
+
+    .slider {
+        display: block;
+    }
+
+    .sec-1,
+    .sec-2 h3,
+    .sec-2 .little-articles,
+    .sec-3 {
+        max-width: 290px;
+        margin: 0 auto;
+    }
+
+    .sec-1 .sec-header {
+        display: none;
+    }
+
+    /*  */
+    .little-article-content:not(:first-child) {
+        display: none;
+    }
+
+    .artic-sec1 {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    .artic-sec1 .ls {
+        display: none;
+    }
+
+    .pic-big {
+        width: 100%;
+        height: 195px;
+    }
+
+    .sec-2-heder {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .sec-2-heder div {
+        width: 100%;
+    }
+
+    .sec-2-heder .pic-heder-sec-2 {
+        height: 245px;
+    }
+
+    .article-context {
+        height: 175px;
+    }
+
+    .sec-2 .btn-section,
+    .sec-3 .btn-section {
+        margin: 53px auto 33px;
+    }
+
+    footer p {
+        bottom: 25px;
+    }
+
+
+
+}
