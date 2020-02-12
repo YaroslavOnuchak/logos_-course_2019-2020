@@ -1,1 +1,1 @@
-# here're homeWorks from course front-end in "Logos"
+here're homeWorks from course front-end in "Logos"
