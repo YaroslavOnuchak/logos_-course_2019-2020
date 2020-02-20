@@ -35,7 +35,7 @@ function listPrim() {
     }
 
 
-    return;
+
 }
 
 listPrim();
