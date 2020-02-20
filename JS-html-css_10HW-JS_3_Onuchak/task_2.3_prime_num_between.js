@@ -6,7 +6,7 @@ function listPrim() {
     if (end > start) {
         for (let j = start; j <= end; j++) {
             let count = 0;
-            let prime;
+
 
             for (let i = 1; i < j; i++) {
                 let result = j % i;
@@ -21,7 +21,6 @@ function listPrim() {
     } else if (end < start) {
         for (let j = end; j <= start; j++) {
             let count = 0;
-            let prime;
 
             for (let i = 1; i < j; i++) {
                 let result = j % i;
