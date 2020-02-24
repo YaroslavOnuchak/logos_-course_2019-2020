@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>js.20_Exam</title>
+
+    <link rel="stylesheet" href="style/main.css">
+</head>
+
+<body>
+    <main>
+        <section class="one ">
+            <div class="result">
+                <p>Lorem ipsum dolor sit amet.</p>
+                <p>Lorem, ipsum dolor.</p>
+                <p>Lorem, ipsum dolor</p>
+                <p>Lorem, ipsum dolor</p>
+                <p>Lorem, ipsum dolor</p>
+            </div>
+
+            <div class="btn-box">
+                <input type="button" value="edit " id="edit" class="btn-radio btn ">
+                <input type="button" value="style" id="style" class="btn btn-radio">
+            </div>
+
+
+            <div class="wrap_edit_style">
+
+                <div class="edit hide">
+                    <textarea name="" id="" cols="30" rows="10" class="textarea"></textarea>
+
+                    <input type="button" value="add " id="add" class="btn">
+                    <input type="button" value="save" id="save" class="btn">
+                </div>
+
+
+                <!-- <div class="style"> -->
+                <div class="style hide">
+
+                    <form name="font_size">
+                        <h3>font size</h3>
+                        <input type="radio" name="fs" value="12px">12px
+                        <input type="radio" name="fs" value="16px" checked>16px
+                        <input type="radio" name="fs" value="18px">18px
+                        <input type="radio" name="fs" value="20px">20px
+                    </form>
+
+                    <form name="font_family">
+                        <h3>font family</h3>
+                        <select name="select">
+                            <optgroup label="Сhoose option">
+                                <option value="cursive">cursive</option>
+                                <option value="fantasy">fantasy</option>
+                                <option value="monospace">monospace</option>
+                                <option value="sans-serif" selected>sans-serif</option>
+                        </select>
+                    </form>
+
+
+
+                    <form name="bth_colors">
+                        <h3>Style</h3>
+                        <input type="button" name="color_text" class="btn btn_set_color" value="ct">
+                        <input type="button" name="background_colors" class="btn btn_set_color" value="bc">
+                    </form>
+
+                    <form name="box_colors" class="wrap_colors_choose hide">
+                        <input type="button" class="colors" value="white">
+                        <input type="button" class="colors" value="red">
+                        <input type="button" class="colors" value="blue">
+                        <input type="button" class="colors" value="green">
+                        <input type="button" class="colors" value="yellow">
+                        <input type="button" class="colors" value="pink">
+                        <input type="button" class="colors" value="aquamarine">
+                        <input type="button" class="colors" value="DarkBlue">
+                        <input type="button" class="colors" value="crimson">
+                    </form>
+
+                    <form name="Style">
+                        <h3>Style</h3>
+                        <input type="checkbox" name="bold_text" value="900">Bold text
+                        <input type="checkbox" name="cursive_text" value="italic">Cursive text
+                    </form>
+
+
+
+
+
+                </div>
+            </div>
+        </section>
+        <section class="two hide">
+            <div class="wrap_create">
+                <form name="type_of_create">
+                    <h3>Choose what you want</h3>
+                    <input type="radio" name="fs" value="table">table
+                    <input type="radio" name="fs" value="ul">list
+
+                </form>
+                <form name="create_list">
+                    <label>Caunt Li:
+                        <input type="number" name="li" placeholder="Caunt Li:" class="set_element_list">
+                    </label>
+                    <br>
+                    <!-- <label>Type of marks:
+                    <input list="browsers" name="browser" class="set_element_list">
+                    <datalist id="browsers" class="set_element_list">
+                      <option value="circle">
+                      <option value="square">
+                      <option value="Chrome">
+                    </label>
+                    </datalist> -->
+
+                    <label>Type of marks:
+                        <select name="Type_of_marks" placeholder="Type of marks:" class="set_element_list">
+                            <option value="circle">circle</option>
+                            <option value="square">square</option>
+                            <option value="disl">disl</option>
+                        </select>
+                    </label>
+                    <input type="button" value="Create list" id="cret_list_btn" class="btn">
+                </form>
+                <form name="create_table"></form>
+
+            </div>
+
+        </section>
+    </main>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
