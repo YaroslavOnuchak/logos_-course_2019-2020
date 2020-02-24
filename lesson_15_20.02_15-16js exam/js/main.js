@@ -154,29 +154,31 @@ console.log(document.create_list.elements[1])
 //         li.style.listStyleType = document.create_list.Type_of_marks.value;
 //     }
 //     console.log(list)
-    
+
 // })
 let list = document.createElement(`ul`)
 let countLi = document.create_list.li.value;
-for (i = 1; i <= countLi; i++) {
-    let li = document.createElement('li')
-    list.appendChild(li);
-    li.innerText = `items ${i}`;
-    li.style.listStyleType = document.create_list.Type_of_marks.value;
-}
+
 
 
 document.querySelector('#cret_list_btn').addEventListener('click', function () {
     document.querySelector('.two').classList.add('hide');
     document.querySelector('.one').style.display = 'block';
+    for (i = 1; i <= countLi; i++) {
+        let li = document.createElement('li')
+        list.appendChild(li);
+        li.innerText = `items ${i}`;
+        li.style.listStyleType = document.create_list.Type_of_marks.value;
+    }
     // console.log(list)
-    
+
 })
 
 
 document.querySelector('#save').addEventListener('click', function () {
     result_box.innerHTML = document.querySelector('.textarea').value;
     edit.classList.remove('show')
-    edit.classList.add('hide');console.log(list)
+    edit.classList.add('hide');
+    console.log(list)
     result_box.appendChild(list);
 })
