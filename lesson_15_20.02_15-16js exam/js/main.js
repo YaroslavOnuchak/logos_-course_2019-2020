@@ -1,36 +1,41 @@
+let getSel = sell => document.querySelector(sell);
+let toggle = function (s, h) {
+
+    h.classList.remove('show')
+    h.classList.add('hide')
+    s.classList.remove('hide')
+    s.classList.add('show')
+}
+
 let edit = document.querySelector('.edit');
 let style = document.querySelector('.style');
 let result_box = document.querySelector('.result');
 
+getSel('#save').addEventListener('click', function () {
+    result_box.innerHTML = getSel('.textarea').value;
+    edit.classList.remove('show')
+    edit.classList.add('hide');
 
+})
 
-document.querySelector('#edit').addEventListener('click', function (event) {
+getSel('#edit').addEventListener('click', function (event) {
 
     if (edit.className == 'edit hide') {
-        edit.classList.remove('hide')
-        edit.classList.add('show')
-        document.querySelector('.textarea').value = result_box.innerHTML
-
-
-        style.classList.remove('show')
-        style.classList.add('hide')
+        getSel('.textarea').value = result_box.innerHTML
+        toggle(edit, style)
     } else {
+
         edit.classList.remove('show')
         edit.classList.add('hide')
-
         style.classList.remove('show')
         style.classList.add('hide')
     }
 })
 
-document.querySelector('#style').addEventListener('click', function (event) {
+getSel('#style').addEventListener('click', function (event) {
 
     if (style.className == 'style hide') {
-        edit.classList.remove('show')
-        edit.classList.add('hide')
-        style.classList.remove('hide')
-        style.classList.add('show')
-
+        toggle(style, edit)
 
     } else {
         edit.classList.remove('show')
@@ -55,7 +60,6 @@ document.font_size.addEventListener('click', function () {
 
 //  font family change ***************************
 document.font_family.addEventListener('change', function () {
-
     result_box.style.fontFamily = this.select.value;
     // for (let i = 0; i < this.select.options.length; i++) {
     //     if (this.select.options[i].selected) {
@@ -69,14 +73,24 @@ let boxColors = document.box_colors;
 let colorText = document.bth_colors.color_text;
 let colorBg = document.bth_colors.background_colors;
 
+function bgBoxColors() {
+    for (let i = 0; i < document.box_colors.children.length; i++) {
+
+        document.box_colors.children[i].style.backgroundColor = document.box_colors.elements[i].value;
+
+
+    }
+}
+bgBoxColors()
 
 colorText.addEventListener('click', function () {
     if (boxColors.className == 'wrap_colors_choose hide') {
         boxColors.classList.remove('hide')
         boxColors.style.display = 'flex';
-        for (i = 0; i < document.box_colors.elements.length; i++) {
-            document.box_colors.elements[i].onclick = function () {
-                result_box.style.color = this.value;
+        for (let i = 0; i < document.box_colors.elements.length; i++) {
+            document.box_colors.children[i].onclick = function () {
+                console.log(document.box_colors.elements[i].value)
+                result_box.style.color = document.box_colors.elements[i].value;
                 boxColors.classList.add('hide')
             }
         }
@@ -92,9 +106,9 @@ colorBg.addEventListener('click', function () {
     if (boxColors.className == 'wrap_colors_choose hide') {
         boxColors.classList.remove('hide')
         boxColors.style.display = 'flex';
-        for (i = 0; i < document.box_colors.elements.length; i++) {
-            document.box_colors.elements[i].onclick = function () {
-                result_box.style.backgroundColor = this.value;
+        for (let i = 0; i < document.box_colors.elements.length; i++) {
+            document.box_colors.children[i].onclick = function () {
+                result_box.style.backgroundColor = document.box_colors.elements[i].value;
                 boxColors.classList.add('hide')
             }
         }
@@ -104,8 +118,6 @@ colorBg.addEventListener('click', function () {
         boxColors.classList.add('hide')
     }
 })
-
-
 
 
 // text style ******************************************************
@@ -134,51 +146,91 @@ cursiveText.addEventListener('click', function () {
     }
 })
 
-// create******
+// create************
+
+
 document.querySelector('#add').addEventListener('click', function () {
-    document.querySelector('.one').style.display = 'none';
-    document.querySelector('.two').classList.remove('hide');
+    toggle(getSel('.two'), getSel('.one'))
+
 
 })
-console.log(document.create_list.elements[1])
 
-// let list = document.createElement(`ul`)
-// let countLi = document.create_list.li.value;
-// document.querySelector('#cret_list_btn').addEventListener('click', function () {
-//     // document.querySelector('.two').classList.add('hide');
-//     document.querySelector('.one').style.display = 'block';
-//     for (i = 1; i <= countLi; i++) {
-//         let li = document.createElement('li')
-//         list.appendChild(li);
-//         li.innerText = `items ${i}`;
-//         li.style.listStyleType = document.create_list.Type_of_marks.value;
-//     }
-//     console.log(list)
-
-// })
-let list = document.createElement(`ul`)
-let countLi = document.create_list.li.value;
+let formList = document.create_list;
+let formTable = document.create_table;
 
 
+// choose table or list************************
+document.type_of_create.addEventListener('click', function () {
+    if (document.type_of_create.elements[0].checked) {
+        toggle(formTable, formList)
 
-document.querySelector('#cret_list_btn').addEventListener('click', function () {
-    document.querySelector('.two').classList.add('hide');
-    document.querySelector('.one').style.display = 'block';
-    for (i = 1; i <= countLi; i++) {
+
+    } else {
+        toggle(formList, formTable)
+    }
+
+})
+// create list ************************
+
+let list;
+
+document.querySelector('#creat_list_btn').addEventListener('click', function () {
+    let countLi = getSel('#li').value;
+    list = document.createElement('ul')
+    for (let i = 1; i <= countLi; i++) {
         let li = document.createElement('li')
-        list.appendChild(li);
         li.innerText = `items ${i}`;
         li.style.listStyleType = document.create_list.Type_of_marks.value;
+        list.appendChild(li);
     }
-    // console.log(list)
 
+    formList.classList.remove('show')
+    formList.classList.add('hide')
+
+
+    toggle(getSel('.one'), getSel('.two'))
+    getSel('.textarea').value += list.innerHTML;
+    document.type_of_create.elements[1].checked = false
 })
+// create table*********************
 
+let table;
+let innerTable;
 
-document.querySelector('#save').addEventListener('click', function () {
-    result_box.innerHTML = document.querySelector('.textarea').value;
-    edit.classList.remove('show')
-    edit.classList.add('hide');
-    console.log(list)
-    result_box.appendChild(list);
+getSel('#creat_tabl_btn').addEventListener('click', function () {
+
+    let countTr = document.create_table.tr.value;
+    let countTd = document.create_table.td.value;
+    let widthBord = document.create_table.wBorder.value;
+    let typeBord = document.create_table.type_of_border.value;
+    let colorBord = document.create_table.color_of_border.value;
+    let hTd = document.create_table.hTd.value;
+    let wTd = document.create_table.wTd.value;
+
+    table = document.createElement('table')
+    table.style.border = `${widthBord}px ${typeBord} ${colorBord}`;
+    table.style.borderCollapse = `collapse`;
+    for (let i = 1; i <= countTr; i++) {
+        let tr = document.createElement('tr');
+        tr.style.border = `${widthBord}px ${typeBord} ${colorBord}`;
+        for (let j = 1; j <= countTd; j++) {
+            let td = document.createElement('td');
+            td.innerText = `TD`;
+            td.style.border = `${widthBord}px ${typeBord} ${colorBord}`;
+            td.style.height = `${hTd}px`
+            td.style.width = `${wTd}px`
+            tr.appendChild(td)
+        }
+        table.appendChild(tr);
+    }
+
+    innerTable = table.innerHTML;
+
+    formTable.classList.add('hide')
+    formTable.classList.remove('show')
+
+    toggle(getSel('.one'), getSel('.two'))
+
+    getSel('.textarea').value += `<table>${innerTable}</table>`;
+    document.type_of_create.elements[0].checked = false
 })

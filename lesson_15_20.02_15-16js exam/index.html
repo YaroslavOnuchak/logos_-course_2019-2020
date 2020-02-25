@@ -12,7 +12,7 @@
 
 <body>
     <main>
-        <section class="one ">
+        <section class="one  ">
             <div class="result">
                 <p>Lorem ipsum dolor sit amet.</p>
                 <p>Lorem, ipsum dolor.</p>
@@ -68,15 +68,35 @@
                     </form>
 
                     <form name="box_colors" class="wrap_colors_choose hide">
-                        <input type="button" class="colors" value="white">
-                        <input type="button" class="colors" value="red">
-                        <input type="button" class="colors" value="blue">
-                        <input type="button" class="colors" value="green">
-                        <input type="button" class="colors" value="yellow">
-                        <input type="button" class="colors" value="pink">
-                        <input type="button" class="colors" value="aquamarine">
-                        <input type="button" class="colors" value="DarkBlue">
-                        <input type="button" class="colors" value="crimson">
+                        <div class="colors"><input type="hidden" value="white">
+
+                        </div>
+                        <div class="colors"><input type="hidden" value="red">
+
+                        </div>
+                        <div class="colors"><input type="hidden" value="blue">
+
+                        </div>
+                        <div class="colors">
+                            <input type="hidden" value="green">
+
+                        </div>
+                        <div class="colors"><input type="hidden" value="yellow">
+
+                        </div>
+                        <div class="colors"> <input type="hidden" value="pink">
+
+                        </div>
+                        <div class="colors"><input type="hidden" value="aquamarine">
+
+                        </div>
+                        <div class="colors"><input type="hidden" value="DarkBlue">
+
+                        </div>
+                        <div class="colors"><input type="hidden" value="crimson">
+
+                        </div>
+
                     </form>
 
                     <form name="Style">
@@ -95,35 +115,66 @@
         <section class="two hide">
             <div class="wrap_create">
                 <form name="type_of_create">
-                    <h3>Choose what you want</h3>
-                    <input type="radio" name="fs" value="table">table
-                    <input type="radio" name="fs" value="ul">list
+                    <h2>Choose what you want</h2>
+                    <input type="radio" name="toc" value="table">table
+                    <input type="radio" name="toc" value="ul">list
 
                 </form>
-                <form name="create_list">
+                <form name="create_list" class=" hide">
                     <label>Caunt Li:
-                        <input type="number" name="li" placeholder="Caunt Li:" class="set_element_list">
+                        <input type="number" id="li" name="li" placeholder="Caunt Li:" class="set_element_list">
                     </label>
                     <br>
-                    <!-- <label>Type of marks:
-                    <input list="browsers" name="browser" class="set_element_list">
-                    <datalist id="browsers" class="set_element_list">
-                      <option value="circle">
-                      <option value="square">
-                      <option value="Chrome">
-                    </label>
-                    </datalist> -->
 
                     <label>Type of marks:
-                        <select name="Type_of_marks" placeholder="Type of marks:" class="set_element_list">
+                        <select name="Type_of_marks" class="set_element_list">
                             <option value="circle">circle</option>
                             <option value="square">square</option>
                             <option value="disl">disl</option>
                         </select>
                     </label>
-                    <input type="button" value="Create list" id="cret_list_btn" class="btn">
+                    <input type="button" value="Create list" id="creat_list_btn" class="btn">
                 </form>
-                <form name="create_table"></form>
+                <form name="create_table" class=" hide">
+                    <label>Caunt TR:
+                        <input type="number" name="tr" placeholder="    enter caunt TR:" class="set_element_list">
+                    </label>
+                    <br>
+                    <label>Caunt TD:
+                        <input type="number" name="td" placeholder="    enter caunt TD:" class="set_element_list">
+                    </label>
+                    <h3> Add style to your table:</h3>
+                    <label>Width of TD:
+                        <input type="number" name="wTd" class="set_element_list">
+                    </label>
+                    <br>
+                    <label>Height of TD:
+                        <input type="number" name="hTd" class="set_element_list">
+                    </label>
+                    <br>
+                    <label>Width of border:
+                        <input type="number" name="wBorder">
+                    </label>
+                    <label>Type of border:
+                        <select name="type_of_border">
+                            <option value="solid">solid</option>
+                            <option value="dashed">dashed</option>
+                            <option value="double">double</option>
+                            <option value="inset">inset</option>
+                            <option value="dotted">dotted</option>
+                        </select>
+                    </label>
+                    <label>Color of border:
+                        <select name="color_of_border">
+                            <option value="black">black</option>
+                            <option value="red">red</option>
+                            <option value="blue">blue</option>
+                            <option value="green">green</option>
+                        </select>
+                    </label>
+                    <br>
+                    <input type="button" value="Create Table" id="creat_tabl_btn" class="btn">
+                </form>
 
             </div>
 
