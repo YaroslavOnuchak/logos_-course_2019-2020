@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>js.20.02_Exam</title>
+    <link rel="stylesheet" href="style/main.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+
+<body>
+    <main class="container ">
+        <section class="one container">
+            <div class="result p-5 mb-2 container ">
+
+                <p>Lorem ipsum dolor sit amet.</p>
+                <p>Lorem, ipsum dolor.</p>
+                <p>Lorem, ipsum dolor</p>
+                <p>Lorem, ipsum dolor</p>
+                <p>Lorem, ipsum dolor</p>
+
+            </div>
+
+            <div class="container justify-content-center d-flex mb-4 mt-4">
+                <input type="button" value="edit " id="edit" class=" btn btn-warning mr-5 btn-lg">
+                <input type="button" value="style" id="style" class="btn btn-primary btn-lg ">
+            </div>
+
+
+            <div class="wrap_edit_style container p-3 m-2 bg-light text-dark ">
+
+                <div class="edit container hide">
+                    <textarea class="textarea form-control" id="exampleFormControlTextarea1" rows="8"></textarea>
+
+                    <input type="button" value="add " id="add" class="btn btn-danger m-2">
+                    <input type="button" value="save" id="save" class="btn btn-success">
+                </div>
+
+
+
+                <div class="style container hide">
+
+                    <form name="font_size">
+                        <h3>font size</h3>
+                        <div class="custom-control custom-radio custom-control-inline">
+                            <input type="radio" id="cus1" name="fs" value="12px" class="custom-control-input">
+                            <label class="custom-control-label" for="cus1"></label>12px</label></div>
+
+                        <div class="custom-control custom-radio custom-control-inline">
+                            <input type="radio" id="cus2" name="fs" value="16px" class="custom-control-input">
+                            <label class="custom-control-label" for="cus2"></label>16px</label></div>
+
+                        <div class="custom-control custom-radio custom-control-inline">
+                            <input type="radio" id="cus3" name="fs" value="18px" class="custom-control-input">
+                            <label class="custom-control-label" for="cus3"></label>18px</label></div>
+
+                        <div class="custom-control custom-radio custom-control-inline">
+                            <input type="radio" id="cus4" name="fs" value="20px" class="custom-control-input">
+                            <label class="custom-control-label" for="cus4"></label>20px</label></div>
+                    </form>
+
+
+
+                    <form name="font_family" class="input-group m-3">
+
+                        <div class="input-group-prepend">
+                            <label class="input-group-text" for="select_family_font">font family</label>
+                        </div>
+                        <select name="select" class="custom-select col-3" id="select_family_font">
+                            <optgroup label="Сhoose option">
+                                <option value="cursive">cursive</option>
+                                <option value="fantasy">fantasy</option>
+                                <option value="monospace">monospace</option>
+                                <option value="sans-serif" selected>sans-serif</option>
+                        </select>
+                    </form>
+
+
+
+                    <form name="bth_colors">
+                        <h3>Colors</h3>
+                        <input type="button" name="color_text" class="btn btn-secondary" value="color of text">
+                        <input type="button" name="background_colors" class="btn btn-secondary"
+                            value="background color">
+                    </form>
+
+                    <form name="box_colors" class="wrap_colors_choose hide">
+                        <div class="colors">
+                            <input type="hidden" value="red" />
+
+                        </div>
+                        <div class="colors">
+                            <input type="hidden" value="blue" />
+
+                        </div>
+                        <div class="colors">
+                            <input type="hidden" value="green" />
+
+                        </div>
+                        <div class="colors">
+                            <input type="hidden" value="yellow" />
+
+                        </div>
+                        <div class="colors">
+                            <input type="hidden" value="white" />
+
+                        </div>
+                        <div class="colors">
+                            <input type="hidden" value="pink" />
+
+                        </div>
+                        <div class="colors">
+                            <input type="hidden" value="aquamarine" />
+
+                        </div>
+                        <div class="colors">
+                            <input type="hidden" value="DarkBlue" />
+
+                        </div>
+                        <div class="colors">
+                            <input type="hidden" value="crimson" />
+
+                        </div>
+
+                    </form>
+
+                    <form name="Style">
+                        <h3>Style</h3>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" name="bold_text" type="checkbox" id="inlineCheckbox1"
+                                value="900">
+                            <label class="form-check-label" for="inlineCheckbox1">Bold text</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" name="cursive_text" type="checkbox" id="inlineCheckbox2"
+                                value="italic">
+                            <label class="form-check-label" for="inlineCheckbox2">Cursive text</label>
+                        </div>
+                        <!--                           
+                        <input type="checkbox" name="bold_text" value="900">
+                        <input type="checkbox" name="cursive_text" value="italic">Cursive text -->
+                    </form>
+
+
+
+
+
+                </div>
+            </div>
+        </section>
+        <section class="two container hide">
+            <div class="wrap_create p-5 mb-2 bg-light text-dark">
+                <form name="type_of_create" class="mb-3">
+                    <h2>Choose what you want</h2>
+
+                    <div class="custom-control custom-radio custom-control-inline">
+                        <input type="radio" id="tableRadio" name="toc" value="table" class="custom-control-input">
+                        <label class="custom-control-label" for="tableRadio"></label>table</label></div>
+
+                    <div class="custom-control custom-radio custom-control-inline">
+                        <input type="radio" id="listRadio" name="toc" value="table" class="custom-control-input">
+                        <label class="custom-control-label" for="listRadio"></label>list</label></div>
+
+                </form>
+
+                <form name="create_list" class="hide">
+                    <div class="container mb-3">
+                        <div class="row justify-content-start">
+                            <label class="col-3" for="li">Caunt Li:</label><input type="number" id="li" name="li"
+                                placeholder="Caunt Li:" class="form-control col-9" required>
+
+                        </div>
+                    </div>
+                    <div class="container mb-3">
+                        <div class="row">
+
+                            <label for="select_style_li" class="col-3">Type of marks:</label>
+
+                            <select name="type_of_marks" class="custom-select  col-9" id="select_style_li">
+                                <option value="circle">circle</option>
+                                <option value="square">square</option>
+                                <option value="disl">disl</option>
+                            </select>
+
+                        </div>
+
+                    </div>
+                    <input type="button" value="Create list" id="creat_list_btn" class="btn btn-success">
+                </form>
+
+                <form name="create_table" class="hide input-group ">
+                    <div class="container">
+                        <div class="form-group row">
+                            <label for="caunt_TR" class="col-sm-2 col-form-label">Caunt TR:</label>
+                            <div class="col-sm-10">
+                                <input type="number" name="tr" placeholder="    enter caunt TR:"
+                                    class="set_element_list form-control" id="caunt_TR">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="caunt_TD" class="col-sm-2 col-form-label">Caunt TD:</label>
+                            <div class="col-sm-10">
+                                <input type="number" name="td" placeholder="    enter caunt TD:"
+                                    class="set_element_list form-control" id="caunt_TD">
+                            </div>
+                        </div>
+                    </div>
+
+                    <h3> Add style to your table:</h3>
+
+                    <div class="container">
+                        <div class="form-group row">
+                            <label for="width_TD" class="col-sm-2 col-form-label">Width of TD:</label>
+                            <div class="col-sm-10">
+                                <input type="number" name="wTd" class="set_element_list form-control" id="width_TD">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="height_TD" class="col-sm-2 col-form-label">Height of TD:</label>
+                            <div class="col-sm-10">
+                                <input type="number" name="hTd" class="set_element_list form-control" id="height_TD">
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="container mb-3 ">
+                        <div class="row justify-content-between">
+
+                            <div>
+                                <label for="width_bord" class="">Width of border:</label>
+
+                                <input type="number" name="wBorder" class="form-control " id="width_bord">
+
+                            </div>
+
+                            <div>
+
+                                <label for="select_tab_bord">Type of
+                                    border:</label>
+
+                                <select name="type_of_border" class="custom-select " id="select_tab_bord">
+
+                                    <option value="solid">solid</option>
+                                    <option value="dashed">dashed</option>
+                                    <option value="double">double</option>
+                                    <option value="inset">inset</option>
+                                    <option value="dotted">dotted</option>
+                                </select>
+
+                            </div>
+                            <div>
+
+                                <label for="select_tab_color">Color of
+                                    border:</label>
+
+                                <select name="color_of_border" class="custom-select" id="select_tab_color">
+                                    <option value="black">black</option>
+                                    <option value="red">red</option>
+                                    <option value="blue">blue</option>
+                                    <option value="green">green</option>
+                                </select>
+
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                    <div class="container ">
+                        <input type="button" value="Create Table" id="creat_tabl_btn" class="btn btn-success mb-3">
+
+                    </div>
+
+                </form>
+
+            </div>
+
+        </section>
+    </main>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
