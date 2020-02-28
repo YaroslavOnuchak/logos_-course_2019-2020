@@ -68,11 +68,13 @@ document.font_family.addEventListener('change', function () {
     // }
 })
 
+
+
 //  set color and background colors ***************
 let boxColors = document.box_colors;
 let colorText = document.bth_colors.color_text;
 let colorBg = document.bth_colors.background_colors;
-
+//  set color of square
 function bgBoxColors() {
     for (let i = 0; i < document.box_colors.children.length; i++) {
 
@@ -108,11 +110,8 @@ colorText.addEventListener('click', function () {
             }
         }
 
-    } else {
-
-        boxColors.classList.remove('show')
-        boxColors.classList.add('hide')
     }
+
 })
 
 
@@ -139,13 +138,29 @@ colorBg.addEventListener('click', function () {
             }
         }
 
-    } else {
-        boxColors.style.display = 'none';
+    }
+
+})
+colorBg.addEventListener('dblclick', function () {
+    if (boxColors.className == 'wrap_colors_choose show') {
         boxColors.classList.remove('show')
         boxColors.classList.add('hide')
+    } else {
+        boxColors.classList.remove('hide')
+        boxColors.classList.add('show')
     }
-})
 
+})
+colorText.addEventListener('dblclick', function () {
+    if (boxColors.className == 'wrap_colors_choose show') {
+        boxColors.classList.remove('show')
+        boxColors.classList.add('hide')
+    } else {
+        boxColors.classList.remove('hide')
+        boxColors.classList.add('show')
+    }
+
+})
 
 // text style ******************************************************
 let boldText = document.forms['Style'].bold_text;
@@ -173,8 +188,9 @@ cursiveText.addEventListener('click', function () {
     }
 })
 
-// create************
 
+
+// create************
 
 document.querySelector('#add').addEventListener('click', function () {
     toggle(getSel('.two'), getSel('.one'))
@@ -197,12 +213,13 @@ document.type_of_create.addEventListener('click', function () {
     }
 
 })
-// create list ************************
 
+
+// create list ***********************************
 let list;
 let listInnerText;
 
-document.querySelector('#creat_list_btn').addEventListener('click', function () {
+document.getSel('#creat_list_btn').addEventListener('click', function () {
     let countLi = getSel('#li').value;
     list = document.createElement('ul')
     for (let i = 1; i <= countLi; i++) {
@@ -220,8 +237,9 @@ document.querySelector('#creat_list_btn').addEventListener('click', function () 
     getSel('.textarea').value += `<ul>${listInnerText}</ul>`;
     document.type_of_create.elements[1].checked = false
 })
-// create table*********************
 
+
+// create table*********************
 let table;
 let innerTable;
 
