@@ -219,7 +219,7 @@ document.type_of_create.addEventListener('click', function () {
 let list;
 let listInnerText;
 
-document.getSel('#creat_list_btn').addEventListener('click', function () {
+getSel('#creat_list_btn').addEventListener('click', function () {
     let countLi = getSel('#li').value;
     list = document.createElement('ul')
     for (let i = 1; i <= countLi; i++) {
