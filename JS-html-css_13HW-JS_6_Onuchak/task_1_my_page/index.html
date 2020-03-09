@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>hw13_JS6 </title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+
+<body>
+    <h1>My page</h1>
+    <p>мої улюблені сайти:
+        <a href="http://">google</a>
+        <a href="http://">w3schools</a>
+        <a href="http://">stackoverflow</a>
+    </p>
+    <div>
+        За допомогою JavaScript запропонувати користувачу вибрати стиль для сторінки. А саме:
+        <ul>
+            <li>фон для сторінки</li>
+            <li>тип шпифта на сторінці</li>
+            <li>вирівнювання для заголовка h1</li>
+            <li>фон для параграфа зі зсилками</li>
+            <li>колір тексту у параграфі зі зсилками і для самих зсилок. При чому колір тексту для зсилок призначити у
+                циклі</li>
+            <li>колір, розмір, товщину тексту у елементі div</li>
+            <li>тип маркера для маркованого списку на сторінці</li>
+        </ul>
+        Таким чином слід запропонувати користувачу ввести десять налаштувань сторінки і застосувати їх.<br />
+        ДОДАТОК ДО ЗАВДАННЯ: замість зсилок на конкретні сайти, вивести у панелі навігації зсилки на три сайти, які
+        вкаже користувач. <br />
+        Наприклад користувач у віконце prompt() ввів адресу football24.ua - в такому разі треба створити зсилку, яка
+        вела б на сайт football24, а текстом цієї зсилки (тим, по чому можна клікнути) буде також football24.ua
+    </div>
+    <div class="container">
+        <div class="row">
+            <form name="backgBody" class="input-group col-4">
+
+                <div class="input-group-prepend">
+                    <label class="input-group-text" for="backgBody">background-color</label>
+                </div>
+                <select name="select" class="custom-select " id="backgBody">
+                    <optgroup label="Сhoose background">
+                        <option value="red">red</option>
+                        <option value="green">green</option>
+                        <option value="aquamarine">aquamarine</option>
+
+                </select>
+            </form>
+            <form name="font_family" class="input-group col-4">
+
+                <div class="input-group-prepend">
+                    <label class="input-group-text" for="select_family_font">font family</label>
+                </div>
+                <select name="select" class="custom-select" id="select_family_font">
+                    <optgroup label="Сhoose option">
+                        <option value="cursive">cursive</option>
+                        <option value="fantasy">fantasy</option>
+                        <option value="monospace">monospace</option>
+                        <option value="sans-serif" selected>sans-serif</option>
+                </select>
+            </form>
+            <form name="h_text_position" class="col-4">
+                <h5>вирівнювання для заголовка h1</h5>
+                <div class="custom-control custom-radio custom-control-inline">
+                    <input type="radio" name="ta" value="left" class="custom-control-input">
+                    <label class="custom-control-label" for="cus1"></label>left</label></div>
+
+                <div class="custom-control custom-radio custom-control-inline">
+                    <input type="radio" id="cus2" name="ta" value="center" class="custom-control-input">
+                    <label class="custom-control-label" for="cus2"></label>center</label></div>
+
+                <div class="custom-control custom-radio custom-control-inline">
+                    <input type="radio" id="cus3" name="ta" value="right" class="custom-control-input">
+                    <label class="custom-control-label" for="cus3"></label>right</label></div>
+            </form>
+
+
+
+
+        </div>
+        <div class="row mt-2">
+            <form name="backgP" class="input-group col-4">
+
+                <div class="input-group-prepend">
+                    <label class="input-group-text" for="backgP">background-col P</label>
+                </div>
+                <select name="select" class="custom-select" id="backgP">
+                    <optgroup label="Сhoose background p">
+                        <option value="red">red</option>
+                        <option value="green">green</option>
+                        <option value="aquamarine">aquamarine</option>
+
+                </select>
+            </form>
+            <form name="colorP" class="input-group col-4">
+
+                <div class="input-group-prepend">
+                    <label class="input-group-text" for="colorP">color P</label>
+                </div>
+                <select name="select" class="custom-select" id="colorP">
+                    <optgroup label="Сhoose color p">
+                        <option value="red">red</option>
+                        <option value="green">green</option>
+                        <option value="aquamarine">aquamarine</option>
+
+                </select>
+            </form>
+            <form name="colorLink" class="input-group col-4">
+
+                <div class="input-group-prepend">
+                    <label class="input-group-text" for="colorLink">color link</label>
+                </div>
+                <select name="select" class="custom-select" id="colorLink">
+                    <optgroup label="Сhoose color link">
+                        <option value="black">black</option>
+                        <option value="yellow">yellow</option>
+                        <option value="pink">pink</option>
+
+                </select>
+            </form>
+        </div>
+        <div class="row mt-2">
+            <form name="colorDiv" class="input-group col-4">
+
+                <div class="input-group-prepend">
+                    <label class="input-group-text" for="colorDiv">color div</label>
+                </div>
+                <select name="select" class="custom-select" id="colorDiv">
+                    <optgroup label="Сhoose color div">
+                        <option value="black">black</option>
+                        <option value="yellow">yellow</option>
+                        <option value="pink">pink</option>
+
+                </select>
+            </form>
+            <form name="font_size" class="input-group col-4">
+                <h5>font size</h5>
+                <div class="custom-control custom-radio custom-control-inline">
+                    <input type="radio" id="fs1" name="fs" value="12px" class="custom-control-input">
+                    <label class="custom-control-label" for="fs1"></label>12px</label></div>
+
+                <div class="custom-control custom-radio custom-control-inline">
+                    <input type="radio" id="fs2" name="fs" value="16px" class="custom-control-input">
+                    <label class="custom-control-label" for="fs2"></label>16px</label></div>
+
+                <div class="custom-control custom-radio custom-control-inline">
+                    <input type="radio" id="fs3" name="fs" value="18px" class="custom-control-input">
+                    <label class="custom-control-label" for="fs3"></label>18px</label></div>
+
+                <div class="custom-control custom-radio custom-control-inline">
+                    <input type="radio" id="fs4" name="fs" value="20px" class="custom-control-input">
+                    <label class="custom-control-label" for="fs4"></label>20px</label></div>
+            </form>
+            <form name="fontWeight" class="input-group col-4">
+
+                <div class="input-group-prepend">
+                    <label class="input-group-text" for="fontWeight">font Weight div</label>
+                </div>
+                <select name="select" class="custom-select" id="fontWeight">
+                    <optgroup label="Сhoose font Weight div">
+                        <option value="500"> bold</option>
+                        <option value="900">bolder</option>
+                        <option value="100">lighter</option>
+
+                </select>
+            </form>
+        </div>
+        <div class="row m-3">
+            <form name="select_style_li" class="input-group">
+                <label for="select_style_li" class="col-3">Type of marks:</label>
+
+                <select name="type_of_marks" class="custom-select  col-9" id="select_style_li">
+                    <option value="circle">circle</option>
+                    <option value="square">square</option>
+                    <option value="disl">disl</option>
+                </select>
+            </form>
+        </div>
+    </div>
+    <script src="main.js"></script>
+
+</body>
+
+</html>
