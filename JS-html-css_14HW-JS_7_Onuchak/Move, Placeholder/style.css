@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Kanit', sans-serif;
+}
+
+body {
+    background-color: lightgreen;}
+
+.wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+}
+
+.colors {
+    width: 300px;
+    height: 300px;
+    border: 2px solid #000;
+    background-color: blue;
+}

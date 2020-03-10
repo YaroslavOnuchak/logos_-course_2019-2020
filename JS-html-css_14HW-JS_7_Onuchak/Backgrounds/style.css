@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Kanit', sans-serif;
+}
+
+body {
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-attachment: fixed;
+    height: calc(100vh - 3rem);
+
+
+}
+
+.wrap_colors_choose {
+    display: flex;
+    flex-wrap: wrap;
+    width: 10rem;
+    height: 10rem;
+    margin: 0 auto;
+    border: 1px solid #000;
+
+}
+
+.colors {
+    width: calc(100%/3);
+    height: calc(100%/3);
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-attachment: fixed;
+}
+
+.show {
+    display: flex;
+}
+
+.hide {
+    display: none;
+}
