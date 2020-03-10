@@ -5,7 +5,7 @@ let getSel = sell => document.querySelector(sell);
 let boxColors = document.box_colors;
 let imgBg = document.bth_colors.color_text;
 let colorBg = document.bth_colors.background_colors;
-//  set color of square
+
 
 function bgBoxColors() {
     for (let i = 0; i < document.box_colors.children.length; i++) {
