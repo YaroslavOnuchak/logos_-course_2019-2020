@@ -1,6 +1,6 @@
 let getSel = sell => document.querySelector(sell);
 
-backgP
+//backgP
 // 
 document.backgBody.addEventListener('change', function () {
     document.body.style.background = this.select.value;
