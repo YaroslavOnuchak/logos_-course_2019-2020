@@ -2,27 +2,63 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
- 
+
 }
-body{
-    background-color: aquamarine;
+
+body, .btn {
+    background-color: darkblue !important;
+    color: mediumspringgreen !important;
 }
-.data-time-wrap{
+
+.data-time-wrap {
     margin: 2em auto;
     width: 40%;
     text-align: center;
 
 }
-.stopwatch-loop-wrap{
+
+.stopwatch-loop-wrap,
+.timer-wrap,
+.timer-set-wrap {
     padding: 3em;
     display: flex;
     justify-content: space-between;
+    text-align: center;
+
 }
-.loop{
+
+.loop {
+    display: flex;
     border: 1px solid #000;
-    width: 200px; 
+    width: 200px;
     height: 100px;
     text-align: center;
-  align-items: center;
-  padding: auto 0;
+    align-items: center;
+    padding: auto 0;
+}
+
+.timer-set-number {
+    font-size: 2em;
+    margin: 0.5em;
+}
+
+.btn-time {
+    width: 50px;
+    height: 50px;
+    font-size: 1.5em;
+    align-self: flex-end;
+}
+
+.timer-caunt {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.timer-caunt-number {
+    width: 100%;
+    font-size: 1.5em;
+}
+
+.timer-caunt .btn {
+    width: calc(100%/3);
 }

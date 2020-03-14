@@ -19,26 +19,45 @@
         <div class="date"></div>
         <div class="time"></div>
     </div>
-    <br>
+
     <hr>
-    <br>
+
     <hr>
-    
+
     <div class="stopwatch-loop-wrap">
         <div class="stopwatch-wrap">
 
             <div class="stopwatch"></div>
-            <button type="button" id="start" class="btn btn-green btn-outline-secondary">start</button>
+            <button type="button" id="start" class="btn btn-outline-secondary">start</button>
             <button type="button" id="loop" class="btn btn-outline-secondary">loop</button>
             <button type="button" id="stop" class="btn btn-outline-secondary">stop</button>
             <button type="button" id="reset" class="btn btn-outline-secondary">reset</button>
         </div>
         <div class="loop"></div>
     </div>
-    <br>
+
     <hr>
-    <br>
     <hr>
+    <div class="timer-wrap">
+        <div class="timer-set-wrap">
+
+            <button type="button" id="minus" class="btn btn-time btn-outline-secondary">-</button>
+            <div class="timer-set"><span class="timer-set-number"></span>
+                <hr><span>minutes</span></div>
+            <button type="button" id="plus" class="btn btn-time  btn-outline-secondary">+</button>
+        </div>
+
+        <div class="timer-caunt">
+            <span class="timer-caunt-number">00:00</span>
+            <button type="button" id="startT" class="btn btn-outline-secondary">start</button>
+
+            <button type="button" id="stopT" class="btn btn-outline-secondary">stop</button>
+            <button type="button" id="resetT" class="btn btn-outline-secondary">reset</button>
+        </div>
+    </div>
+
+
+
     <script src="main.js"></script>
 </body>
 
