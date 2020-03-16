@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-attachment: fixed;
+    height: calc(100vh);
+
+
+}
+
+header {
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: .5em;
+    -webkit-border-radius: .5em;
+    -moz-border-radius: .5em;
+    -ms-border-radius: .5em;
+    -o-border-radius: .5em;
+    box-shadow: 0 0 1em inset;
+}
+
+i {
+    color: black;
+}
+
+main {
+    margin-top: 2rem;
+    /* text-align: right; */
+}
+
+.result {
+    padding: 2rem;
+    position: relative;
+
+}
+
+.wrap_colors_choose {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.colors {
+    border-radius: 10%;
+    margin: 0.1rem;
+    min-width: 3em;
+    min-height: 3em;
+    outline: none;
+    border: 1px solid #000;
+    color: darkturquoise;
+    -webkit-border-radius: 10%;
+    -moz-border-radius: 10%;
+    -ms-border-radius: 10%;
+    -o-border-radius: 10%;
+    cursor: pointer;
+}
+
+[name='box_img'] .colors {
+    width: calc(100%/3);
+    height: calc(100%/3);
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-attachment: fixed;
+}
+
+.btn:hover {
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.2);
+    transform: translateY(-3px);
+}
+
+.valid {
+    color: red;
+    font-size: 0.9em;
+
+}
+
+[name="create_table"] {
+    font-size: 0.9em;
+}
+
+table {
+    text-align: center;
+
+}
+
+textarea[name="textarea"],
+textarea[name="textarea"]:focus {
+    border: none !important;
+    outline: none !important;
+    resize: none !important;
+    overflow: auto !important;
+    width: 100%;
+    min-height: 80vh;
+    box-shadow: none;
+}
+
+.hide {
+    display: none !important;
+
+}
+
+.show {
+    display: block;
+}

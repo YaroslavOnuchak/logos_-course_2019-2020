@@ -1,0 +1,534 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Exam_2</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="style/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+</head>
+
+<body>
+    <header class="container  bg-secondary">
+        <div class="edit-box row justify-content-center hide ">
+            <form name="save">
+                <button type="button" name="saveBtn" class="btn btn-light">
+                    <i class="fas fa-save"></i>
+                </button>
+            </form>
+            <form name="table">
+                <button type="button" class="btn btn-light" data-toggle="modal" data-target="#static_table">
+                    <i class="fas fa-table"></i>
+                </button>
+            </form>
+            <form name="ol_list">
+                <button type="button" class="btn btn-light" data-toggle="modal" data-target="#static_list_ol">
+                    <i class="fas fa-list-ol"></i>
+                </button>
+            </form>
+            <form name="ul_list">
+                <button type="button" class="btn btn-light" data-toggle="modal" data-target="#static_list_ul">
+                    <i class="fas fa-list-ul"></i>
+                </button>
+            </form>
+        </div>
+
+        <div class="row justify-content-center  style-box">
+            <form name="edit" class="mr-3" data-toggle="tooltip" data-placement="left" title="need sign in">
+                <button type="button" class="btn btn-light" disabled>
+                    <i class="fas fa-code"></i>
+                </button>
+            </form>
+            <form name="text_style" class="mr-3">
+
+                <input type="checkbox" class="btn-link hide" name="t_Bold" id="tBold" value='bold'><label for="tBold"
+                    class="btn btn-light"><i class="fas fa-bold"></i></label>
+
+                <input type="checkbox" class=" hide" name="italic" id="t_Italic" value='italic'><label for="t_Italic"
+                    class="btn btn-light"><i class="fas fa-italic"></i></label>
+
+                <input type="checkbox" class="hide" name="underline" id="t_Under_Line" value='underline'><label
+                    for="t_Under_Line" class="btn btn-light "><i class="fas fa-underline"></i></label>
+
+                <input type="checkbox" class="hide" name="line_through" id="t_through_Line" value='line-through'>
+                <label for="t_through_Line" class="btn btn-light">
+                    <i class="fas fa-strikethrough"></i>
+                </label>
+
+            </form>
+
+            <form name="text_align" class="mr-3">
+                <input type="radio" id="cus1" name="fs" value="left" class="hide">
+                <label for="cus1" class="btn btn-light"><i class="fas fa-align-left"></i></label>
+                <input type="radio" id="cus2" name="fs" value="center" class="hide">
+                <label for="cus2" class="btn btn-light"><i class="fas fa-align-center"></i></label>
+                <input type="radio" id="cus3" name="fs" value="right" class="hide">
+                <label for="cus3" class="btn btn-light"><i class="fas fa-align-right"></i></label>
+
+
+            </form>
+            <form name="font_family">
+                <div class="dropdown">
+                    <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenu3"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-font"></i>
+                    </button>
+
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenu3">
+                        <button class="dropdown-item" type="button" value="cursive">cursive</button>
+                        <button class="dropdown-item" type="button" value="fantasy">fantasy</button>
+                        <button class="dropdown-item" type="button" value="monospace">monospace</button>
+                        <button class="dropdown-item" type="button" value="sans-serif">sans-serif</button>
+                    </div>
+                </div>
+            </form>
+
+
+            <form name="font_size">
+                <div class="dropdown">
+                    <button class="btn btn-light  dropdown-toggle" type="button" id="dropdownMenu2"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i
+                            class="fas fa-text-height"></i>
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+
+                        <button class="dropdown-item" type="button" value="12px">12px</button>
+                        <button class="dropdown-item" type="button" value="16px">16px</button>
+                        <button class="dropdown-item" type="button" value="20px">20px</button>
+                        <button class="dropdown-item" type="button" value="24px">24px</button>
+                    </div>
+                </div>
+            </form>
+            <form name="t_color">
+
+                <button type="button" name="color_text" class="btn btn-light" data-toggle="modal"
+                    data-target="#staticBackdrop">
+                    <i class="fas fa-palette"></i>
+                </button>
+            </form>
+
+            <form name="bg" class="mr-3">
+
+                <button type="button" name="bg_btn" class="btn btn-light" data-toggle="modal"
+                    data-target="#staticBackdrop"><i class="far fa-image"></i></button>
+            </form>
+
+            <form class="sign_form">
+                <button type="button" id="lock_btn" class="btn btn-light " data-toggle="modal"
+                    data-target="#static_mail_out">
+                    <i class="fas fa-lock"></i>
+                    <i class="fas fa-lock-open hide"></i>
+                </button>
+            </form>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="modal_box">
+            <!-- Modal bg color -->
+            <div class="modal fade" id="staticBackdrop" data-backdrop="static" tabindex="-1" role="dialog"
+                aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="staticBackdropLabel_2">Choose text color</h5>
+                            <h5 class="modal-title bg_element" id="staticBackdropLabel_1">Choose background color and
+                                img</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+
+                            <ul class="nav nav-tabs mb-3" id="myTab" role="tablist">
+                                <li class="nav-item">
+                                    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab"
+                                        aria-controls="home" aria-selected="true">Colors</a>
+                                </li>
+                                <li class="nav-item bg_element">
+                                    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab"
+                                        aria-controls="profile" aria-selected="false">Img</a>
+                                </li>
+                                <li class="nav-item bg_element">
+                                    <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab"
+                                        aria-controls="contact" aria-selected="false">File</a>
+                                </li>
+                            </ul>
+                            <div class="tab-content" id="myTabContent">
+                                <div class="tab-pane fade show active" id="home" role="tabpanel"
+                                    aria-labelledby="home-tab">
+                                    <form name="box_colors" class="wrap_colors_choose">
+                                        <div class="colors">
+                                            <input type="hidden" value="red" />
+
+                                        </div>
+                                        <div class="colors">
+                                            <input type="hidden" value="blue" />
+
+                                        </div>
+                                        <div class="colors">
+                                            <input type="hidden" value="green" />
+
+                                        </div>
+                                        <div class="colors">
+                                            <input type="hidden" value="yellow" />
+
+                                        </div>
+                                        <div class="colors">
+                                            <input type="hidden" value="white" />
+
+                                        </div>
+                                        <div class="colors">
+                                            <input type="hidden" value="pink" />
+
+                                        </div>
+                                        <div class="colors">
+                                            <input type="hidden" value="aquamarine" />
+
+                                        </div>
+                                        <div class="colors">
+                                            <input type="hidden" value="DarkBlue" />
+
+                                        </div>
+                                        <div class="colors">
+                                            <input type="hidden" value="crimson" />
+
+                                        </div>
+                                        <div class="colors">
+                                            <input type="hidden" value="blueviolet" />
+
+                                        </div>
+                                        <div class="colors">
+                                            <input type="hidden" value="cadetblue" />
+
+                                        </div>
+                                        <div class="colors">
+                                            <input type="hidden" value="darkturquoise" />
+
+                                        </div>
+
+                                    </form>
+                                </div>
+                                <div class="tab-pane fade bg_element" id="profile" role="tabpanel"
+                                    aria-labelledby="profile-tab">
+                                    <form name="box_img" class="wrap_colors_choose ">
+                                        <div class="colors"></div>
+                                        <div class="colors"></div>
+                                        <div class="colors"></div>
+                                        <div class="colors"></div>
+                                        <div class="colors"></div>
+                                        <div class="colors"></div>
+                                        <div class="colors"></div>
+                                        <div class="colors"></div>
+                                        <div class="colors"></div>
+
+                                    </form>
+                                </div>
+                                <div class="tab-pane fade bg_element" id="contact" role="tabpanel"
+                                    aria-labelledby="contact-tab">
+                                    <div class=""></div>
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text" id="inputGroupFileAddon01">Upload</span>
+                                    </div>
+                                    <div class="custom-file">
+                                        <input type="file" class="custom-file-input" id="inputGroupFile01"
+                                            aria-describedby="inputGroupFileAddon01">
+                                        <label class="custom-file-label" for="inputGroupFile01">Choose
+                                            file</label>
+                                    </div>
+
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <section class="modal_mail">
+            <!-- Modal mail -->
+            <div class="modal fade" id="static_mail" data-backdrop="static" tabindex="-1" role="dialog"
+                aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header bg-success">
+                            <h5 id="staticBackdropLabel_3">Sign In</h5>
+
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <form name="signIn">
+
+                                <div class="form-group">
+
+                                    <input type="text" name="log" class="form-control" id="exampleDropdownFormEmail2"
+                                        placeholder="login here....">
+                                </div>
+
+                                <div class="form-group">
+
+                                    <input type="password" name="pass" class="form-control" id="pass"
+                                        placeholder="password here...">
+                                </div>
+                                <p class="mail_meseg valid">
+
+                                </p>
+
+                                <button type="button" class="btn btn-large btn-block btn-success" id="signIn">Sign
+                                    in</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <section class="modal_mail_out">
+            <!-- Modal mail -->
+            <div class="modal fade" id="static_mail_out" data-backdrop="static" tabindex="-1" role="dialog"
+                aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-body container">
+                            <form name="signOut" class="row">
+                                <input type="button" value="Close" class="btn btn-secondary w-50" data-dismiss="modal">
+                                <input type="button" value="Sign Out" id="signOut" class="btn btn-danger  w-50">
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <section class="modal_table">
+            <!-- Modal table -->
+            <div class="modal fade" id="static_table" data-backdrop="static" tabindex="-1" role="dialog"
+                aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header bg-success">
+                            <h5 id="staticBackdropLabel_4">Create table</h5>
+
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <form name="create_table" class=" input-group ">
+                                <div class="container">
+                                    <div class="form-group row">
+                                        <label for="caunt_TR" class="col-sm-2 col-form-label">Caunt TR:</label>
+                                        <div class="col-sm-10">
+                                            <input type="number" name="tr" placeholder="    enter caunt TR:"
+                                                class="set_element_list form-control" id="caunt_TR" required>
+                                        </div>
+
+                                        <label for="caunt_TD" class="col-sm-2 col-form-label">Caunt TD:</label>
+                                        <div class="col-sm-10">
+                                            <input type="number" name="td" placeholder="    enter caunt TD:"
+                                                class="set_element_list form-control" id="caunt_TD" required>
+                                        </div>
+                                    </div>
+
+
+
+
+                                    <div class="form-group row">
+                                        <label for="width_TD" class="col-sm-2 col-form-label">Width of TD:</label>
+                                        <div class="col-sm-10">
+                                            <input type="number" name="wTd" class="set_element_list form-control"
+                                                id="width_TD" required>
+                                        </div>
+
+                                        <label for="height_TD" class="col-sm-2 col-form-label">Height of TD:</label>
+                                        <div class="col-sm-10">
+                                            <input type="number" name="hTd" class="set_element_list form-control"
+                                                id="height_TD" required>
+                                        </div>
+                                    </div>
+
+
+
+                                    <div class="row justify-content-between">
+
+
+                                        <label for="width_bord" class="">Width of border:</label>
+
+                                        <input type="number" name="wBorder" class="form-control " id="width_bord"
+                                            required>
+
+
+
+
+
+                                        <label for="select_tab_bord">Type of
+                                            border:</label>
+
+                                        <select name="type_of_border" class="custom-select " id="select_tab_bord"
+                                            required>
+
+                                            <option value="solid">solid</option>
+                                            <option value="dashed">dashed</option>
+                                            <option value="double">double</option>
+                                            <option value="inset">inset</option>
+                                            <option value="dotted">dotted</option>
+                                        </select>
+
+
+                                        <label for="select_tab_color">Color of
+                                            border:</label>
+
+                                        <select name="color_of_border" class="custom-select" id="select_tab_color"
+                                            required>
+                                            <option value="black">black</option>
+                                            <option value="red">red</option>
+                                            <option value="blue">blue</option>
+                                            <option value="green">green</option>
+                                        </select>
+
+
+                                    </div>
+                                    <p class="table_meseg valid">
+
+                                    </p>
+                                    <div class="row  w-100 mt-3">
+                                        <input type="button" value="Create Table" id="creat_tabl_btn"
+                                            class="btn btn-success w-50">
+                                        <input type="button" value="Reset" id="reset_tabl_btn"
+                                            class="reset_tabl_btn btn btn-danger  w-50">
+                                    </div>
+
+
+
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <section class="modal_list_Ol">
+            <!-- Modal list ol -->
+            <div class="modal fade" id="static_list_ol" data-backdrop="static" tabindex="-1" role="dialog"
+                aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header bg-success">
+                            <h5 id="staticBackdropLabel_5">Create OL</h5>
+
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <form name="create_list_ol">
+                                <div class="container mb-3">
+                                    <div class="row justify-content-start">
+                                        <label class="col-3" for="li">Caunt Li:</label><input type="number" id="li"
+                                            name="li" placeholder="Caunt Li:" class="form-control col-9" required>
+                                    </div>
+                                    <div class="row">
+                                        <label for="select_style_li" class="col-3">Type of marks:</label>
+                                        <select name="type_of_marks" class="custom-select  col-9" id="select_style_li">
+                                            <option value="upper-roman">upper-roman</option>
+                                            <option value="decimal">decimal</option>
+                                            <option value="lower-greek">lower-greek</option>
+                                        </select>
+                                    </div>
+                                    <p class="valid" id="list_meseg"></p>
+                                    <div class="row  w-100 mt-3">
+                                        <input type="button" value="Create list" id="creat_list_ol_btn"
+                                            class="btn btn-success w-50">
+
+                                        <input type="button" value="Reset" id="reset_list_ol_btn"
+                                            class="reset_list_btn btn btn-danger  w-50">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </section>
+        <section class="modal_list_ul">
+            <!-- Modal list ul -->
+            <div class="modal fade" id="static_list_ul" data-backdrop="static" tabindex="-1" role="dialog"
+                aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header bg-success">
+                            <h5 id="staticBackdropLabel_6">Create UL</h5>
+
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <form name="create_list_ul">
+                                <div class="container mb-3">
+                                    <div class="row justify-content-start">
+                                        <label class="col-3" for="li2">Caunt Li:</label><input type="number" id="li2"
+                                            name="li" placeholder="Caunt Li:" class="form-control col-9" required>
+                                    </div>
+                                    <div class="row">
+                                        <label for="select_style_li2" class="col-3">Type of marks:</label>
+                                        <select name="type_of_mark2" class="custom-select  col-9" id="select_style_li2">
+                                            <option value="circle">circle</option>
+                                            <option value="square">square</option>
+                                            <option value="disl">disl</option>
+                                        </select>
+                                    </div>
+                                    <p class="valid" id="list_meseg2"></p>
+                                    <div class="row  w-100 mt-3">
+                                        <input type="button" value="Create list" id="creat_list_ul_btn"
+                                            class="btn btn-success w-50">
+
+                                        <input type="button" value="Reset" id="reset_list_ul_btn"
+                                            class="reset_list_btn btn btn-danger  w-50">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </section>
+        <section class="result">
+            <p>Lorem ipsum dolor sit amet.</p>
+            <p>Lorem, ipsum dolor.</p>
+            <p>Lorem, ipsum dolor</p>
+            <p>Lorem, ipsum dolor</p>
+            <p>Lorem, ipsum dolor</p>
+        </section>
+        <section class="textarea hide">
+            <textarea name="textarea" class=" form-control" id="exampleFormControlTextarea1" rows="8"></textarea>
+        </section>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+    </script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
