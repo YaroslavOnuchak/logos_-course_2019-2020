@@ -1,0 +1,320 @@
+@media screen and (min-width: 774px) and (max-width: 1200px) {
+	body {
+
+		min-width: 774px;
+	}
+
+	nav {
+
+
+		ul {
+			li {
+				font-size: 0.85em;
+				margin: 0 0.4em;
+				padding: 5px 10px;
+
+			}
+		}
+
+	}
+
+	header {
+
+		min-height: 480px;
+		margin-bottom: 7em;
+
+		.menu-logo {
+			nav {
+				margin-top: 33px;
+				width: 85%;
+
+				.logo {
+
+					width: 240px;
+					height: 93px;
+					object-fit: contain;
+					object-position: center bottom;
+
+				}
+
+				ul {
+					height: 47px;
+					margin-right: 2vw;
+
+					li {
+						font-size: 0.85em;
+						margin: 0 .8vw;
+						padding: 5px 10px;
+
+
+					}
+				}
+			}
+		}
+
+		.heder-text {
+			min-height: 390px;
+
+			align-items: center;
+			
+			
+			text-shadow: 0 0 2px #000000;
+
+			div {
+
+				background-color: rgba(61, 71, 76, 0.76);
+			
+				box-shadow: 0px 13px 8px 0px rgba(26, 34, 38, 0.52);
+				text-align: right;
+
+				width: 350px;
+				height: 145px;
+				padding: 1em;
+
+
+			}
+		}
+
+
+	}
+
+	main {
+		width: 100%;
+
+		.sec-1 {
+			min-height: 300px;
+
+
+			&-context {
+				flex-wrap: wrap;
+				padding: 0 2em;
+
+				.servise {
+					width: 100%;
+					justify-content: space-between;
+					margin-bottom: 1em;
+
+
+
+
+				}
+
+				.contaks {
+					width: 100%;
+					flex-wrap: wrap;
+					justify-content: center;
+					// flex-direction: column;
+
+					.contaks-phone {
+						min-width: 25%;
+						margin-left: 1rem;
+					}
+
+
+					span {
+						margin: .5rem 0;
+						width: 100%;
+						text-align: center;
+
+					}
+				}
+
+
+
+			}
+
+			.wrap-adres {
+				width: 90%;
+
+				.adres {
+					min-width: 25%;
+					min-height: 110px;
+
+				}
+			}
+
+		}
+
+		.sec-2 {
+
+			min-height: 315px;
+			align-items: center;
+
+
+			.photo {
+
+				height: 320px;
+
+			}
+		}
+
+		.sec-white {
+			padding: 1em 2em;
+			margin: 1em 2em;
+		}
+
+		.sec-3 {
+
+			min-height: 200px;
+
+			h2 {
+
+				margin-bottom: 2em;
+			}
+
+			.preferences {
+
+
+				&-type {
+
+					img {
+						width: 32px;
+					}
+
+					h5 {
+						font-size: 12px;
+					}
+				}
+
+			}
+
+		}
+
+		.sec-4 {
+			min-height: 430px;
+			padding: 1.5rem 2rem;
+
+			h2 {
+
+				margin-bottom: 2rem;
+			}
+
+			.servise-box-btns {
+
+				margin-right: 0.5em;
+
+			}
+
+			.servise-context {
+
+				min-height: 330px;
+
+
+			}
+
+		}
+
+		.sec-5 {
+			min-height: 250px;
+
+			.sec-5-wrap-contex {
+				font-size: 14px;
+			}
+
+		}
+
+		.sec-6 {
+			padding: 0.5rem 0;
+
+			.wrap-reviews {
+				margin: 1rem auto;
+
+				.review-profile {
+					width: 25%;
+					min-height: 280px;
+					padding: 1rem 0.5rem;
+
+					img {
+						width: 120px;
+					}
+				}
+
+
+			}
+
+			.review-btn {
+				width: 167px;
+				margin-right: 3em;
+			}
+		}
+
+		.sec-7 {
+			.sec-7-wrap-contex {
+				margin-top: 1rem;
+
+
+				.sec-7-wrap-text {
+					width: 35%;
+
+					p {
+						font-size: 0.9em;
+					}
+				}
+
+				img {
+					width: 55px;
+				}
+
+			}
+
+		}
+	}
+
+	footer {
+		min-height: 270px;
+		align-items: center;
+
+		.footer-logo {
+			width: 25%;
+			height: 20%;
+
+
+		}
+
+
+
+		.footer-info-nav {
+
+			width: 70%;
+			height: 30%;
+
+			nav {
+
+				margin: 1.5rem 0;
+
+				ul {
+					width: 100%;
+					justify-content: space-evenly;
+				}
+			}
+		}
+
+		.footer-logo-text {
+			display: none;
+		}
+
+		.footer-info-adres {
+
+			// margin-top: -4em;
+			width: 100%;
+			justify-content: space-evenly;
+
+			.footer-info {
+
+				width: 25%;
+
+				padding: 1rem;
+
+				font-size: 14px;
+
+
+
+			}
+
+		}
+
+
+
+
+	}
+}
