@@ -4,7 +4,7 @@ here're homeWorks from course front-end in "Logos" \
  https://yaroslavonuchak.github.io/logos_-course_2019-2020/exam_input_value/index.html \
  exzam_2:
  \
- https://yaroslavonuchak.github.io/logos_-course_2019-2020/exam_2_input_value/index.html \
+ https://yaroslavonuchak.github.io/logos_-course_2019-2020/exam_2_input_value/index.html 
 
 web site: \
 hw3:\
